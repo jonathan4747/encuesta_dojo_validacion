@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/stylesplataforma.css')}}"/>
+        <title> Plataforma </title>
+    </head>
+    <body>
+        <div class='cuerpo'>
+            <div class='informacion'>
+                <h1> Informacion grabada</h1>
+                <p> Nombre : {{datos['nombre']}}</p>
+                <p> Dojo Location : {{datos['lugar']}}</p>
+                <p> Favorite Language : {{datos['lenguaje']}}</p>
+                <p> Comment : {{datos['comentario']}}</p>
+            </div>
+            <form action="/salir" method="GET">
+                <button type="submit">
+                    Go Back
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

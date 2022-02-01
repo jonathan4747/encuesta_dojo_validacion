@@ -1,0 +1,41 @@
+body{
+    justify-content: center;
+    display: flex;
+}
+h1{
+    color: yellow;
+}
+.cuerpo{
+    border: solid gray;
+    text-align: center;
+    width: 500px;
+    background-color: gray ;
+}
+
+.itmes{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 100px;
+    padding-top: 20px;        
+}
+
+button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 250px;
+    padding: 5px;
+    background-color: yellow;
+    cursor: pointer;
+}
+#comentario{
+    height:100px;
+}
+.itmes > label{
+    text-align: start;
+}
+
+input{
+    border-radius: 10px;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"/>
+        <title> Registro </title>
+    </head>
+    <body>
+        <div class='cuerpo'>
+           <h1>
+              Dojo Survey
+            </h2>
+            <form action="/registro" method="POST">
+                <div class='itmes'>
+                    <label for="nombre">
+                        Your Name:
+                    </label> 
+                    <input type="text" id="nombre" name="nombre" />
+                </div>
+                <div class='itmes'>
+                    <label for="lugar">
+                        Dojo Location:
+                    </label> 
+                    <select id="lugar" name="lugar" />
+                        <option value="">--Select A Location--</option>
+                        <option value="peru">Perú</option>
+                        <option value="chile">Chile</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="eeuu">EEUU</option>
+                    </select>
+                </div>
+                <div class='itmes'>
+                    <label for="lenguaje">
+                        Favorite Language:
+                    </label> 
+                    <select id="lenguaje" name="lenguaje" />
+                        <option value="">--Select A Language--</option>
+                        <option value="c++">C++</option>
+                        <option value="python">Python</option>
+                        <option value="css">CSS</option>
+                        <option value="html">HTML</option>
+                     </select>
+                </div>
+                <div class='itmes'>
+                    <label for="comentario">
+                        Comment (optional):
+                    </label> 
+                    <input type="text" id="comentario" name="comentario" />
+                </div>
+                <button type="submit">
+                    Button
+                </button>
+            </form>
+            {% with messages = get_flashed_messages() %}     
+                {% if messages %}                            
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </body>
+</html>
